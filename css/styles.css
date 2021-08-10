@@ -397,6 +397,9 @@ img {
 .img-description {
   padding: 30px 32px;
 }
+.img-projects {
+  padding: 20px 24px;
+}
 .name {
   font-weight: 500;
   font-size: 16px;
@@ -620,7 +623,8 @@ img {
 .footer-contacts:focus {
   color: var(--accent-color);
 }
-.join-us {
+.join-us,
+.mailing {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -673,8 +677,45 @@ img {
 }
 .footer-socials {
   width: 206px;
+  margin-right: 93px;
 }
-
+.mailing-form {
+  display: flex;
+  flex-direction: row;
+}
+.mailing-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  background-color: var(--accent-bgc);
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.mailing-input:hover {
+  border-color: var(--accent-color);
+}
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  line-height: 1.87;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.mailing-icon {
+  margin-left: 10px;
+}
 /* Modal  */
 .backdrop.is-hidden {
   visibility: hidden;
@@ -701,8 +742,19 @@ img {
   min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-info {
+  margin: 40px 40px 20px 40px;
+}
+.modal-strong {
+font-weight: bold;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
 }
 .close {
   position: absolute;
