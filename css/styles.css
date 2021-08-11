@@ -692,6 +692,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mailing-input:hover {
   border-color: var(--accent-color);
@@ -742,19 +743,13 @@ img {
   min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-info {
   margin: 40px 40px 20px 40px;
-}
-.modal-strong {
-font-weight: bold;
-font-size: 20px;
-line-height: 1.15;
-text-align: center;
-letter-spacing: 0.03em;
 }
 .close {
   position: absolute;
@@ -771,4 +766,68 @@ letter-spacing: 0.03em;
 .close-icon {
   object-position: center;
   fill: rgba(0, 0, 0, 1);
+}
+.close:hover .close-icon,
+.close:focus .close-icon {
+  fill: var(--accent-color);
+}
+.modal-strong {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-field label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+#name,
+#tel,
+#email {
+  width: 100%;
+  height: 40px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 1%;
+  color: rgba(117, 117, 117, 0.5);
+}
+input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+.icon-check {
+  fill: var(--accent-color);
+}
+.mailing-checkbox {
+  margin-bottom: 30px;
 }
