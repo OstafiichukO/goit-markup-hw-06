@@ -829,5 +829,12 @@ input:focus {
   fill: var(--accent-color);
 }
 .mailing-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
