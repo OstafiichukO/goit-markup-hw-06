@@ -796,8 +796,6 @@ img {
 input:focus {
   border-color: var(--accent-color);
 }
-/* .form-list {
-} */
 .form-element {
   margin-bottom: 10px;
 }
@@ -838,6 +836,7 @@ input:focus {
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  resize: none;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -866,10 +865,6 @@ input:focus {
   width: 425px;
   cursor: pointer;
 }
-/* .checkbox {
-  width: 16px;
-  height: 15px;
-} */
 .icon-check {
   position: absolute;
   width: 16px;
