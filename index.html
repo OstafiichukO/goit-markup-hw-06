@@ -57,7 +57,7 @@
                             <use href="./image/icons.svg#close"></use>
                         </svg>
                     </button>
-                    <div class="modal-info">
+                    <!-- <div class="modal-info"> -->
                         <strong class="modal-strong">Оставьте свои данные, мы вам перезвоним</strong>
                         <form>
                             <div class="form-field">
@@ -65,7 +65,7 @@
                                     <li class="form-element">
                                         <label for="name">Имя</label>
                                         <span class="icon-anchor">
-                                            <input type="text" name="name" id="name">
+                                            <input type="text" name="name" id="name" required>
                                             <svg class="form-icon" width="18" height="18">
                                                 <use href="./image/icons.svg#person-black"></use>
                                             </svg>
@@ -74,7 +74,7 @@
                                     <li class="form-element">
                                         <label for="tel">Телефон</label>
                                         <span class="icon-anchor">
-                                            <input type="tel" name="number" id="tel">
+                                            <input type="tel" name="number" id="tel" required>
                                             <svg class="form-icon" width="18" height="18">
                                                 <use href="./image/icons.svg#phone-black"></use>
                                             </svg>
@@ -83,7 +83,7 @@
                                     <li class="form-element">
                                         <label for="email">Почта</label>
                                         <span class="icon-anchor">
-                                            <input type="email" name="email" id="email">
+                                            <input type="email" name="email" id="email" required>
                                             <svg class="form-icon" width="18" height="18">
                                                 <use href="./image/icons.svg#email-black"></use>
                                             </svg>
@@ -96,19 +96,21 @@
                                 </ul>              
                             </div>
                             <div class="mailing-field">
-                                <label class="checkbox-label">
-                                    <input class="checkbox" type="checkbox" name="topic" value="comment" />
-                                    <span class="icon-check">
-                                        <svg class="icon-checkbox" width="16" height="15">
-                                            <use href="./image/icons.svg#icon-check"></use>
-                                        </svg>
-                                    </span>
-                                    <p class="text-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="conditions">Условия договора</a></p>
-                                </label>
+                                <!-- <p class="text-checkbox"> -->
+                                    <label class="checkbox-label">
+                                        <input class="checkbox" type="checkbox" name="topic" value="comment" />
+                                        <span class="icon-check">
+                                            <svg class="icon-checkbox" width="16" height="15">
+                                                <use href="./image/icons.svg#icon-check"></use>
+                                            </svg>
+                                        </span>
+                                        Соглашаюсь с рассылкой и принимаю <a href="" class="conditions">Условия договора</a>
+                                    </label>
+                                <!-- </p> -->
                             </div>
-                            <button class="btn primary">Отправить</button>
+                            <button class="btn-send">Отправить</button>
                         </form>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
@@ -406,66 +408,64 @@
     <!--Footer-->
     <footer class="footer">
         <!-- <section class="footer-section"> -->
-        <div class="container">
-            <div class="footer-groups">
-                <div class="footer-group">
-                    <a href="./index.html" class="footer-logo"><span class="web">Web</span>Studio</a>
-                    <address class="address">
-                        <ul class="auth-nav">
-                            <li class="auth-item">
-                                <p class="location">Киев, пр-т Леси Украинки, 26</p>
-                            </li>
-                            <li class="auth-item"><a href="mailto:info@devstudio.com"
-                                    class="footer-contacts">info@devstudio.com</a></li>
-                            <li class="auth-item"><a href="tel:+380961111111" class="footer-contacts">+38 096 111 11
-                                    11</a></li>
-                        </ul>
-                    </address>
-                </div>
-                <div class="footer-socials">
-                    <p class="join-us">присоединяйтесь</p>
-                    <ul class="fs-list">
-                        <li class="fs-item">
-                            <a href="" class="fs-link">
-                                <svg class="fs-icon" width="20" height="20">
-                                    <use href="./image/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
+        <div class="container footer-groups"> 
+            <div class="footer-group">
+                <a href="./index.html" class="footer-logo"><span class="web">Web</span>Studio</a>
+                <address class="address">
+                    <ul class="auth-nav">
+                        <li class="auth-item">
+                            <p class="location">Киев, пр-т Леси Украинки, 26</p>
                         </li>
-                        <li class="fs-item">
-                            <a href="" class="fs-link">
-                                <svg class="fs-icon" width="20" height="20">
-                                    <use href="./image/icons.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="fs-item">
-                            <a href="" class="fs-link">
-                                <svg class="fs-icon" width="20" height="20">
-                                    <use href="./image/icons.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="fs-item">
-                            <a href="" class="fs-link">
-                                <svg class="fs-icon" width="20" height="20">
-                                    <use href="./image/icons.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
+                        <li class="auth-item"><a href="mailto:info@devstudio.com"
+                                class="footer-contacts">info@devstudio.com</a></li>
+                        <li class="auth-item"><a href="tel:+380961111111" class="footer-contacts">+38 096 111 11
+                                11</a></li>
                     </ul>
-                </div>
-                <div class="mailing-group">
-                    <p class="mailing">Подпишитесь на рассылку</p>
-                    <form class="mailing-form">
-                        <input type="email" name="E-mail" placeholder="E-mail" class="mailing-input" maxlength="36">
-                        <button type="submit" class="submit-btn">Подписаться
-                            <svg class="mailing-icon" width="24" height="24">
-                                <use href="./image/icons.svg#icon-send"></use>
+                </address>
+            </div>
+            <div class="footer-socials">
+                <p class="join-us">присоединяйтесь</p>
+                <ul class="fs-list">
+                    <li class="fs-item">
+                        <a href="" class="fs-link">
+                            <svg class="fs-icon" width="20" height="20">
+                                <use href="./image/icons.svg#instagram"></use>
                             </svg>
-                        </button>
-                    </form>
-                </div>
+                        </a>
+                    </li>
+                    <li class="fs-item">
+                        <a href="" class="fs-link">
+                            <svg class="fs-icon" width="20" height="20">
+                                <use href="./image/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="fs-item">
+                        <a href="" class="fs-link">
+                            <svg class="fs-icon" width="20" height="20">
+                                <use href="./image/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="fs-item">
+                        <a href="" class="fs-link">
+                            <svg class="fs-icon" width="20" height="20">
+                                <use href="./image/icons.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mailing-group">
+                <p class="mailing">Подпишитесь на рассылку</p>
+                <form class="mailing-form">
+                    <input type="email" name="E-mail" placeholder="E-mail" class="mailing-input" maxlength="36">
+                    <button type="submit" class="submit-btn">Подписаться
+                        <svg class="mailing-icon" width="24" height="24">
+                            <use href="./image/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
         <!-- </section> -->

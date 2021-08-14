@@ -117,6 +117,7 @@ img {
 }
 .auth-item {
   display: inline-block;
+  width: 231px;
 }
 .icon-envelope {
   margin-right: 10px;
@@ -157,7 +158,7 @@ img {
   position: absolute;
   bottom: -1px;
   width: 100%;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
   border-radius: 2px;
 }
 .link:hover,
@@ -195,10 +196,8 @@ img {
   padding: 10px 32px;
   border: 1px solid transparent;
   border-radius: 4px;
-  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
@@ -399,6 +398,9 @@ img {
 }
 .img-projects {
   padding: 20px 24px;
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
 }
 .name {
   font-weight: 500;
@@ -673,7 +675,7 @@ img {
   align-items: baseline;
 }
 .footer-group {
-  margin-right: 79px;
+  margin-right: 70px;
 }
 .footer-socials {
   width: 206px;
@@ -692,6 +694,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: #ffffff;
+  cursor: pointer;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -742,6 +745,7 @@ img {
   left: 50%;
   min-width: 528px;
   min-height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -749,9 +753,9 @@ img {
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-info {
-  margin: 40px 40px 20px 40px;
-}
+/* .modal-info {
+  padding: 40px 40px 20px 40px;
+} */
 .close {
   position: absolute;
   width: 30px;
@@ -810,15 +814,6 @@ input:focus {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-#name:hover,
-#tel:hover,
-#email:hover,
-#comment:hover {
-  border-color: var(--accent-color);
-}
-.form-element:hover .form-icon {
-  fill: var(--accent-color);
-}
 #name,
 #tel,
 #email {
@@ -828,6 +823,7 @@ input:focus {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  /* outline: none; */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 #comment {
@@ -839,6 +835,7 @@ input:focus {
   border-radius: 4px;
   resize: none;
   cursor: pointer;
+  /* outline: none; */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 #comment::placeholder {
@@ -847,27 +844,48 @@ input:focus {
   letter-spacing: 1%;
   color: rgba(117, 117, 117, 0.5);
 }
-.mailing-field {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+#name:hover,
+#tel:hover,
+#email:hover,
+#comment:hover,
+#name:focus,
+#tel:focus,
+#email:focus,
+#comment:focus {
+  border-color: var(--accent-color);
 }
-.mailing-field input {
-  width: 16px;
-  height: 15px;
-  margin: 0;
-  padding: 0;
+.form-element:hover .form-icon {
+  fill: var(--accent-color);
+}
+#name:focus + .form-icon,
+#tel:focus + .form-icon,
+#email:focus + .form-icon,
+#comment:focus + .form-icon {
+  fill: var(--accent-color);
+}
+.mailing-field {
+  margin-bottom: 30px;
+  padding: 4px 12px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
 .checkbox-label {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 425px;
   cursor: pointer;
+}
+.checkbox {
+  width: 16px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
 }
 .icon-check {
   position: absolute;
+  top: 50%;
+  transform: translateY(-52%);
   width: 16px;
   height: 15px;
   opacity: 0;
@@ -875,15 +893,30 @@ input:focus {
 .icon-checkbox {
   fill: var(--accent-color);
 }
-.text-checkbox {
+/* .text-checkbox {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-}
+} */
 .checkbox:checked + .icon-check {
   opacity: 1;
 }
 .conditions {
   color: var(--accent-color);
+}
+.btn-send {
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
